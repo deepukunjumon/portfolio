@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Deepu Kunjumon</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <nav>
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+            <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
+            <label for="darkModeToggle" class="checkbox-label">
+                <i class="fa fa-moon"></i>
+                <i class="fa fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </ul>
+        <!-- Mobile Navigation Section -->
+        <div class="mobile-nav" id="mobileNav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
+            <label for="darkModeToggle" class="checkbox-label">
+                <i class="fa fa-moon"></i>
+                <i class="fa fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </nav>
+
+    <!-- ================================== PROFILE SECTION ================================== -->
+    <section id="profile" class="container">
+        <div class="profile">
+            <img src="assets/img/pro-pic1.webp" alt="Profile Picture">
+        </div>
+        <div class="content">
+            <h1>Hi, I'm <span>Deepu</span></h1>
+            <p>Backend developer<br>High-level experience in web design and development knowledge, producing quality
+                work.</p>
+            <button class="btn btn-contact">Contact</button>
+            <button class="btn btn-resume">Resume</button>
+            <div id="socialMedia" class="social-media">
+                <!-- Single icon for mobile view -->
+                <div class="mobile-icon" onclick="DOMContentLoaded()">
+                    <i class="fas fa-chevron-circle-up"></i>
+                </div>
+
+                <!-- Social media icons (hidden in mobile view initially) -->
+                <ul class="wrapper">
+                    <li class="icon github">
+                        <span><i class="fab fa-github"></i></span>
+                    </li>
+                    <li class="icon linkedin">
+                        <span><i class="fab fa-linkedin"></i></span>
+                    </li>
+                    <li class="icon whatsapp">
+                        <span><i class="fab fa-whatsapp"></i></span>
+                    </li>
+                    <li class="icon instagram">
+                        <span><i class="fab fa-instagram"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ================================== END PROFILE SECTION ======================== ===== -->
+    <!-- ================================================ABOUT================================ -->
+    <!-- <section id="about">
+        <div class="container about-container">
+            <h2>About <span>Me</span></h2>
+            <p class="subtitle">My introduction</p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Web developer, with extensive knowledge and years of experience, working in web technologies and
+                        UI / UX design, delivering quality work.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>2</h3>
+                            <p>Years experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>20+</h3>
+                            <p>Completed projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>05+</h3>
+                            <p>Companies worked</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-download-cv">Download CV</a>
+                </div>
+
+                <div class="about-image">
+                    <img src="assets/img/about-pic.webp" alt="Profile Image">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- ============================================================END ABOUT SECTION ======= -->
+    <!-- ================================== CONTACT SECTION ================================== -->
+    <section id="contact">
+        <div class="container contact-container">
+            <div class="title">
+                <h2>Let's <span>Connect</span></h2>
+                <p>Hey! Let's discuss your ideas and let me see how I can help you with</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-detail">
+                    <h3>Contact Details</h3>
+                    <br>
+                    <p><strong>Phone:</strong> <a href="tel:+918086952858">+91 8086952858</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:deepukunjumon1@gmail.com">deepukunjumon1@gmail.com</a>
+                    </p>
+                    <p><strong>Address:</strong> Kerala, India</p>
+                </div>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm"
+                    onsubmit="return handleFormSubmit(this);">
+                    <div class="form-group">
+                        <input type="hidden" name="access_key" value="1e065638-c704-40a1-9869-3d36d68c838e">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-contact">Send Now!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================================== END CONTACT SECTION ================================== -->
+
+</body>
+
+</html>
