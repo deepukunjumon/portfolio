@@ -3,19 +3,24 @@ function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
 
-// Function to toggle the mobile navigation menu
-function toggleMenu() {
+function toggleMenu(x) {
   const mobileNav = document.getElementById("mobileNav");
   const contentContainer = document.getElementById("contentContainer");
 
+  // Toggle the 'active' class for the mobile navigation menu
   mobileNav.classList.toggle("active");
 
+  // Toggle the 'change' class for the menu icon animation
+  x.classList.toggle("change");
+
+  // Add or remove blur effect on the content based on menu state
   if (mobileNav.classList.contains("active")) {
     contentContainer.classList.add("blur");
   } else {
     contentContainer.classList.remove("blur");
   }
 }
+
 
 // Function to handle form submission
 function handleFormSubmit(form) {

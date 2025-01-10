@@ -14,12 +14,16 @@
 <body>
     <!-- Navigation Section -->
     <nav>
-        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        <div class="menu-icon" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>          
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
             <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
             <label for="darkModeToggle" class="checkbox-label">
                 <i class="fa fa-moon"></i>
@@ -44,8 +48,8 @@
 
     <!-- ================================== PROFILE SECTION ================================== -->
     <section id="profile" class="container">
-        <div class="profile">
-            <img src="assets/img/pro-pic1.webp" alt="Profile Picture">
+        <div class="m-auto">
+            <img class="profile-img" src="assets/img/pro-pic1.webp" alt="Profile Picture">
         </div>
         <div class="content">
             <h1>Hi, I'm <span>Deepu</span></h1>
@@ -120,12 +124,12 @@
         <div class="container contact-container">
             <div class="title">
                 <h2>Let's <span>Connect</span></h2>
-                <p>Hey! Let's discuss your ideas and let me see how I can help you with</p>
+                <p class="title-desc">Hey! Let's discuss your ideas and let me see how I can help you with</p>
             </div>
 
             <div class="contact-content">
                 <div class="contact-detail">
-                    <h3>Contact Details</h3>
+                    <h3 class="contact-subtitle">Contact Details</h3>
                     <br>
                     <p><strong>Phone:</strong> <a href="tel:+918086952858">+91 8086952858</a></p>
                     <p><strong>Email:</strong> <a href="mailto:deepukunjumon1@gmail.com">deepukunjumon1@gmail.com</a>
