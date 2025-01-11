@@ -6,9 +6,11 @@ function toggleDarkMode() {
 function toggleMenu(x) {
   const mobileNav = document.getElementById("mobileNav");
   const contentContainer = document.getElementById("contentContainer");
+  const body = document.body;
 
   // Toggle the 'active' class for the mobile navigation menu
   mobileNav.classList.toggle("active");
+  body.classList.toggle("blur-active");
 
   // Toggle the 'change' class for the menu icon animation
   x.classList.toggle("change");
