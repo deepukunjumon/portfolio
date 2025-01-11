@@ -36,11 +36,11 @@ section .container {
   width: 100%;
 }
 :root {
-  --primary-color: #037f6f;
+  --primary-color: #0ed6b1;
   --primary-accent-color: #969696;
   --secondary-color: #252525;
   --background-color: #f7f7f7;
-  --dark-mode-background: #1a1a2e;
+  --dark-mode-background: #000000;
   --dark-mode-text: #e2e8f0;
 }
 html {
@@ -263,7 +263,7 @@ nav ul li a:hover:after {
 .bar2,
 .bar3 {
   height: 2px;
-  background-color: #333;
+  background-color: var(--primary-color);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -315,7 +315,8 @@ nav ul li a:hover:after {
 .container {
   position: relative;
   z-index: 50;
-  margin-top: 240px;
+  margin-top: 200px;
+  margin-bottom: 150px;
   transition: filter 0.3s ease-in-out;
 }
 .contact-container,
@@ -367,7 +368,7 @@ body.dark-mode #contact,
 body.dark-mode .mobile-nav {
   background: var(--dark-mode-background);
   color: var(--dark-mode-text);
-  transition: background 0.3s, color 0.3s;
+  transition: background 2s, color 2s;
 }
 body.dark-mode #about h2 span,
 body.dark-mode #contact a,
@@ -411,7 +412,8 @@ body.dark-mode .contact-form button:hover {
 .tabs {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: -40px;
+  margin-top: 25px;
 }
 .tabs button {
   border: none;
@@ -504,6 +506,79 @@ section {
   justify-content: center;
   align-items: center;
 }
+/* Example styles for progress bars */
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  position: relative;
+  height: 10px;
+}
+.progress-line {
+  height: 100%;
+  border-radius: 10px;
+  transition: max-width 0.5s ease;
+}
+.php {
+  background-color: #4caf50;
+}
+.fa-php {
+  color: #4caf50;
+}
+.mysql {
+  background-color: #007bff;
+}
+.fa-database {
+  color: #007bff;
+}
+.html {
+  background-color: #f44336;
+}
+.fa-html5 {
+  color: #f44336;
+}
+.css {
+  background-color: #ffeb3b;
+}
+.fa-css3-alt {
+  color: #ffeb3b;
+}
+.js {
+  background-color: #ff5722;
+}
+.fa-js {
+  color: #ff5722;
+}
+.sql {
+  background-color: #f39c12;
+}
+.fa-sql {
+  color: #f39c12;
+}
+.react {
+  background-color: #61dafb;
+}
+.fa-react {
+  color: #61dafb;
+}
+.node {
+  background-color: #8cc84b;
+}
+.fa-node {
+  color: #8cc84b;
+}
+.java {
+  background-color: #ff9800;
+}
+.fa-java {
+  color: #ff9800;
+}
+.python {
+  background-color: #3498db;
+}
+.fa-python {
+  color: #3498db;
+}
 .progress-bar,
 section > * {
   margin-bottom: 20px;
@@ -543,7 +618,6 @@ section .container .content {
   flex-direction: column;
   box-shadow: 0 5px 5px #0000001a;
   cursor: pointer;
-  transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .wrapper .icon:hover {
   opacity: 1;
@@ -650,7 +724,6 @@ section .container .content {
 .progress-line,
 .progress-line::after {
   position: absolute;
-  background-color: var(--primary-color);
 }
 .progress-bar::after {
   position: absolute;
@@ -892,9 +965,6 @@ section .container .content {
   }
 }
 @media (max-width: 480px) {
-  .contaoner {
-    margin-top: 165px;
-  }
   .content h1,
   h2 {
     font-size: 1.8rem;
@@ -935,12 +1005,14 @@ section .container .content {
     filter: blur(15px);
   }
   .container {
-    margin-top: 0;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+  section .container {
+    margin-bottom: 50px;
   }
   .social-media {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+    display: none;
   }
   .social-media a {
     color: inherit;
