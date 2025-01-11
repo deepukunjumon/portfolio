@@ -25,8 +25,8 @@
         </div>
 
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Experience</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
             <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
@@ -46,7 +46,7 @@
                 <div class="ball"></div>
             </label>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Experience</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </div>
@@ -62,8 +62,9 @@
             <h1>Hi, I'm <span>Deepu</span></h1>
             <p>Backend developer<br>High-level experience in web design and development knowledge, producing quality
                 work.</p>
-            <button class="btn btn-contact">Contact</button>
-            <button class="btn btn-resume">Resume</button>
+            <button class="btn btn-contact" onclick="window.location.href='#contact';">Contact</button>
+            <button class="btn btn-resume"
+                onclick="window.location.href='https://drive.google.com/file/d/1XrY1-MhCeQDMIPIgOFaZmX0TJg9eRKxF/view?usp=drive_link';">Resume</button>
 
             <div id="socialMedia" class="social-media">
                 <!-- Social Media Icons -->
@@ -71,17 +72,30 @@
                     <i class="fas fa-chevron-circle-up"></i>
                 </div>
                 <ul class="wrapper">
-                    <li class="icon github">
-                        <span><i class="fab fa-github"></i></span>
-                    </li>
                     <li class="icon linkedin">
-                        <span><i class="fab fa-linkedin"></i></span>
+                        <a href="https://www.linkedin.com/in/deepu-kunjumon/" target="_blank"
+                            style="color: inherit; text-decoration: none;">
+                            <span><i class="fab fa-linkedin"></i></span>
+                        </a>
+                    </li>
+                    <li class="icon github">
+                        <a href="https://github.com/deepukunjumon" target="_blank"
+                            style="color: inherit; text-decoration: none;">
+                            <span><i class="fab fa-github"></i></span>
+                        </a>
                     </li>
                     <li class="icon whatsapp">
-                        <span><i class="fab fa-whatsapp"></i></span>
+                        <a href="https://wa.me/+918086952858" target="_blank"
+                            style="color: inherit; text-decoration: none;">
+                            <span><i class="fab fa-whatsapp"></i></span>
+                        </a>
                     </li>
+
                     <li class="icon instagram">
-                        <span><i class="fab fa-instagram"></i></span>
+                        <a href="https://www.instagram.com/deepu__kunjumon" target="_blank"
+                            style="color: inherit; text-decoration: none;">
+                            <span><i class="fab fa-instagram"></i></span>
+                        </a>
                     </li>
                 </ul>
             </div>
