@@ -25,8 +25,8 @@ function toggleMenu(x) {
 function handleFormSubmit(form) {
   setTimeout(() => {
     form.reset();
-  }, 500); // Reset the form after 500ms
-  return true; // Allow form submission
+  }, 1200);
+  return true;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,6 +49,33 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   elementsToAnimate.forEach((element) => observer.observe(element));
+
+  // IntersectionObserver for Skills Progress Animation
+  const skillsSection = document.querySelector("#skills");
+  const progressLines = document.querySelectorAll(".progress-line");
+
+  // Create an intersection observer to trigger the animation
+  const progressObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Start the animation when the section is in view
+          progressLines.forEach((line) => {
+            line.style.animation =
+              "animate 1.5s cubic-bezier(0.3, 0.3, 0.3, 0.3) forwards";
+          });
+          observer.unobserve(skillsSection); // Stop observing after the animation starts
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the section is in view
+    }
+  );
+
+  if (skillsSection) {
+    progressObserver.observe(skillsSection);
+  }
 });
 
 // Social media button toggle

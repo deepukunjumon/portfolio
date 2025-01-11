@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Deepu Kunjumon</title>
+
+    <!-- External Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- External Scripts -->
     <script src="assets/js/main.js"></script>
 </head>
 
@@ -19,10 +23,11 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
+
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Experience</a></li>
-            <li><a href="#">Skills</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
             <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
             <label for="darkModeToggle" class="checkbox-label">
@@ -31,6 +36,7 @@
                 <div class="ball"></div>
             </label>
         </ul>
+
         <!-- Mobile Navigation Section -->
         <div class="mobile-nav" id="mobileNav">
             <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
@@ -41,28 +47,29 @@
             </label>
             <li><a href="#about">About</a></li>
             <li><a href="#">Experience</a></li>
-            <li><a href="#">Skills</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </div>
     </nav>
-    <!-- ================================== PROFILE SECTION ================================== -->
+
+    <!-- Profile Section -->
     <section id="profile" class="container">
         <div class="m-auto">
             <img class="profile-img" src="assets/img/pro-pic1.webp" alt="Profile Picture">
         </div>
+
         <div class="content">
             <h1>Hi, I'm <span>Deepu</span></h1>
             <p>Backend developer<br>High-level experience in web design and development knowledge, producing quality
                 work.</p>
             <button class="btn btn-contact">Contact</button>
             <button class="btn btn-resume">Resume</button>
+
             <div id="socialMedia" class="social-media">
-                <!-- Single icon for mobile view -->
+                <!-- Social Media Icons -->
                 <div class="mobile-icon" onclick="DOMContentLoaded()">
                     <i class="fas fa-chevron-circle-up"></i>
                 </div>
-
-                <!-- Social media icons (hidden in mobile view initially) -->
                 <ul class="wrapper">
                     <li class="icon github">
                         <span><i class="fab fa-github"></i></span>
@@ -80,28 +87,73 @@
             </div>
         </div>
     </section>
-    <!-- ================================== END PROFILE SECTION ======================== ===== -->
-    <!-- ================================================ABOUT================================ -->
+
+    <!-- About Section -->
     <section id="about">
         <div class="container about-container">
             <div class="title">
                 <h2>About <span>Me</span></h2>
             </div>
-
         </div>
     </section>
-    <!-- ============================================================END ABOUT SECTION ======= -->
-    <!-- ================================================SKILLS================================ -->
-    <section id="skills">
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
         <div class="container skills-container">
             <div class="title">
                 <h2>My <span>Skills</span></h2>
             </div>
 
+            <div class="row">
+                <!-- Left Section -->
+                <section class="col-1">
+                    <div class="skills-container">
+                        <div class="skill">
+                            <div class="subject">PHP</div>
+                            <div class="progress-bar" value="82%">
+                                <div class="progress-line" style="max-width: 82%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="subject">MySQL</div>
+                            <div class="progress-bar" value="79%">
+                                <div class="progress-line" style="max-width: 79%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Right Section -->
+                <section class="col-2">
+                    <div class="skills-container">
+                        <div class="skill">
+                            <div class="subject">HTML</div>
+                            <div class="progress-bar" value="85%">
+                                <div class="progress-line" style="max-width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="subject">CSS</div>
+                            <div class="progress-bar" value="79%">
+                                <div class="progress-line" style="max-width: 79%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="subject">JavaScript</div>
+                            <div class="progress-bar" value="70%">
+                                <div class="progress-line" style="max-width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </section>
-    <!-- ============================================================END SKILLS SECTION ======= -->
-    <!-- ================================== CONTACT SECTION ================================== -->
+
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container contact-container">
             <div class="title">
@@ -110,9 +162,9 @@
             </div>
 
             <div class="contact-content">
+                <!-- Contact Details -->
                 <div class="contact-detail">
                     <h3 class="contact-subtitle">Contact Details</h3>
-                    <br>
                     <p><i class="fa fa-phone-alt"></i><strong> Phone:</strong> <a href="tel:+918086952858">+91
                             8086952858</a></p>
                     <p><i class="fa fa-envelope"></i><strong> Email:</strong> <a
@@ -120,6 +172,7 @@
                     <p><i class="fa fa-map-marker-alt"></i><strong> Address:</strong> Kerala, India</p>
                 </div>
 
+                <!-- Contact Form -->
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm"
                     onsubmit="return handleFormSubmit(this);">
                     <div class="form-group">
@@ -133,9 +186,6 @@
             </div>
         </div>
     </section>
-
-
-    <!-- ================================== END CONTACT SECTION ================================== -->
 
 </body>
 
