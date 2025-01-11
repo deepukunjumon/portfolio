@@ -1212,7 +1212,7 @@ section .container .content {
     align-items: center;
   }
   .timeline-item.right::after {
-    left: 139px;
+    left: 153px;
   }
 
   .timeline-content {
