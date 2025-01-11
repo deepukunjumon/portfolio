@@ -18,7 +18,7 @@
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
-        </div>          
+        </div>
         <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Experience</a></li>
@@ -33,19 +33,18 @@
         </ul>
         <!-- Mobile Navigation Section -->
         <div class="mobile-nav" id="mobileNav">
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
             <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
             <label for="darkModeToggle" class="checkbox-label">
                 <i class="fa fa-moon"></i>
                 <i class="fa fa-sun"></i>
                 <div class="ball"></div>
             </label>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </div>
     </nav>
-
     <!-- ================================== PROFILE SECTION ================================== -->
     <section id="profile" class="container">
         <div class="m-auto">
@@ -83,15 +82,25 @@
     </section>
     <!-- ================================== END PROFILE SECTION ======================== ===== -->
     <!-- ================================================ABOUT================================ -->
-     <section id="about">
+    <section id="about">
         <div class="container about-container">
             <div class="title">
                 <h2>About <span>Me</span></h2>
             </div>
 
         </div>
-     </section>
+    </section>
     <!-- ============================================================END ABOUT SECTION ======= -->
+    <!-- ================================================SKILLS================================ -->
+    <section id="skills">
+        <div class="container skills-container">
+            <div class="title">
+                <h2>My <span>Skills</span></h2>
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================================================END SKILLS SECTION ======= -->
     <!-- ================================== CONTACT SECTION ================================== -->
     <section id="contact">
         <div class="container contact-container">
@@ -104,11 +113,13 @@
                 <div class="contact-detail">
                     <h3 class="contact-subtitle">Contact Details</h3>
                     <br>
-                    <p><i class="fa fa-phone-alt"></i><strong> Phone:</strong> <a href="tel:+918086952858">+91 8086952858</a></p>
-                    <p><i class="fa fa-envelope"></i><strong> Email:</strong> <a href="mailto:deepukunjumon1@gmail.com">deepukunjumon1@gmail.com</a></p>
+                    <p><i class="fa fa-phone-alt"></i><strong> Phone:</strong> <a href="tel:+918086952858">+91
+                            8086952858</a></p>
+                    <p><i class="fa fa-envelope"></i><strong> Email:</strong> <a
+                            href="mailto:deepukunjumon1@gmail.com">deepukunjumon1@gmail.com</a></p>
                     <p><i class="fa fa-map-marker-alt"></i><strong> Address:</strong> Kerala, India</p>
                 </div>
-                
+
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm"
                     onsubmit="return handleFormSubmit(this);">
                     <div class="form-group">
@@ -117,7 +128,7 @@
                         <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <textarea name="message" placeholder="Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-contact">Send Now!</button>
+                    <button type="submit" class="btn btn-contact" onclick="showPopup(event)">Send</button>
                 </form>
             </div>
         </div>

@@ -103,7 +103,8 @@ button.btn-submit:hover {
 }
 
 #contact h2 span,
-#about h2 span {
+#about h2 span,
+#skills h2 span {
   font-size: 2rem;
   margin-bottom: 10px;
   color: var(--primary-color);
@@ -178,18 +179,6 @@ button.btn-submit:hover {
   background: #019f78;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .title {
   opacity: 0;
   animation: fadeInUp 1s ease-in forwards;
@@ -231,6 +220,7 @@ button.btn-submit:hover {
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
+  animation: fadeInLeft 1.5s ease forwards;
 }
 
 .m-auto {
@@ -419,7 +409,7 @@ nav ul li a:hover:after {
   transition: transform 0.2s linear, background 0.3s ease;
 }
 
-body .checkbox:checked+.checkbox-label .ball {
+body .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
   background: var(--dark-mode-background);
 }
@@ -478,11 +468,11 @@ section {
   align-items: center;
 }
 
-section>* {
+section > * {
   margin-bottom: 20px;
 }
 
-section:last-child>* {
+section:last-child > * {
   margin-bottom: 0;
 }
 
@@ -505,16 +495,6 @@ section .container .content {
   /* Existing fadeInRight animation */
   animation: fadeInRight 1.5s ease-in-out;
 }
-
-/* section .container .profile {
-  margin: 20px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeInLeft 1.5s ease-in-out;
-} */
 
 .social-media {
   margin-top: 45px;
@@ -644,6 +624,18 @@ section .container .content {
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   nav ul {
@@ -660,6 +652,48 @@ section .container .content {
     padding: 20px;
   }
 
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .checkbox-label {
+    width: 50px;
+    height: 26px;
+    top: -255px;
+    right: 16px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .checkbox-label .fa-moon {
+    color: #f1c40f;
+  }
+
+  .checkbox-label .fa-sun {
+    color: #ff9d00;
+  }
+
+  .checkbox-label .ball {
+    background-color: var(--background-color);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear, background 0.3s ease;
+  }
+
+  body .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+    background-color: red !important;
+  }
 
   .profile-img {
     margin-top: 90px;
@@ -716,18 +750,6 @@ section .container .content {
   .about-image {
     margin-top: 20px;
     animation: fadeInUp 1.5s ease forwards;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   .profile {
@@ -805,6 +827,24 @@ section .container .content {
     font-size: 1.8rem;
   }
 
+  .profile-img {
+    margin-top: 90px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .content {
+    animation: fadeInUp 1.5s ease forwards;
+  }
+  .btn-contact {
+    animation: fadeInLeft 1.5s ease forwards;
+  }
+  .btn-resume {
+    animation: fadeInRight 1.5s ease forwards;
+  }
   .subtitle,
   #contact p {
     font-size: 0.9rem;
@@ -874,5 +914,15 @@ section .container .content {
 
   .mobile-nav a {
     font-size: 1rem;
+  }
+}
+/* Large Devices (desktops, 1024px to 1280px) */
+@media (max-width: 1280px) {
+  .profile-img {
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 }

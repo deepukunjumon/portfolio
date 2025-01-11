@@ -21,7 +21,6 @@ function toggleMenu(x) {
   }
 }
 
-
 // Function to handle form submission
 function handleFormSubmit(form) {
   setTimeout(() => {
