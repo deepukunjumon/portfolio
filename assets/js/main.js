@@ -23,6 +23,25 @@ function toggleMenu(x) {
   }
 }
 
+function showTab(tab) {
+  const educationTab = document.getElementById("education");
+  const workTab = document.getElementById("work");
+  const educationButton = document.getElementById("education-tab");
+  const workButton = document.getElementById("work-tab");
+
+  if (tab === "education") {
+    educationTab.classList.remove("hidden");
+    workTab.classList.add("hidden");
+    educationButton.classList.add("active");
+    workButton.classList.remove("active");
+  } else {
+    workTab.classList.remove("hidden");
+    educationTab.classList.add("hidden");
+    workButton.classList.add("active");
+    educationButton.classList.remove("active");
+  }
+}
+
 // Function to handle form submission
 function handleFormSubmit(form) {
   setTimeout(() => {

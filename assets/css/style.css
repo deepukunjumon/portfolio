@@ -108,7 +108,8 @@ button.btn-submit:hover {
 
 #contact h2 span,
 #about h2 span,
-#skills h2 span {
+#skills h2 span,
+#qualifications h2 span {
   font-size: 2rem;
   margin-bottom: 10px;
   color: var(--primary-color);
@@ -369,6 +370,7 @@ nav ul li a:hover:after {
 .container {
   position: relative;
   z-index: 50;
+  margin-top: 240px;
   transition: filter 0.3s ease-in-out;
 }
 
@@ -459,6 +461,132 @@ body.dark-mode .contact-form {
 body.dark-mode .contact-form button:hover {
   background: var(--primary-color);
   color: #ffffff;
+}
+
+.qualification-container {
+  width: 100%;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.qualification-container h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.qualification-container p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.tabs button.active {
+  background-color: #ececec;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #ccc;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.timeline-item.left::after {
+  right: -10px;
+}
+
+.timeline-item.right::after {
+  left: -10px;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.timeline-content .year {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Section alignment */
@@ -1060,6 +1188,35 @@ section .container .content {
 
   .mobile-nav a {
     font-size: 1rem;
+  }
+  .timeline-item {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .timeline-item::after {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline::after {
+    left: 50%;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .timeline-item.right::after {
+    left: 139px;
+  }
+
+  .timeline-content {
+    width: 100%;
   }
 }
 /* Large Devices (desktops, 1024px to 1280px) */
