@@ -316,7 +316,7 @@ nav ul li a:hover:after {
 .container {
   position: relative;
   z-index: 50;
-  margin-top: 200px;
+  margin-top: 230px;
   margin-bottom: 150px;
   transition: filter 0.3s ease-in-out;
 }
@@ -369,7 +369,7 @@ body.dark-mode #contact,
 body.dark-mode .mobile-nav {
   background: var(--dark-mode-background);
   color: var(--dark-mode-text);
-  transition: background 2s, color 2s;
+  transition: background 0.5s, color 0.5s;
 }
 body.dark-mode #about h2 span,
 body.dark-mode #contact a,
@@ -565,30 +565,6 @@ section {
 }
 .fa-sql {
   color: #f39c12;
-}
-.react {
-  background-color: #61dafb;
-}
-.fa-react {
-  color: #61dafb;
-}
-.node {
-  background-color: #8cc84b;
-}
-.fa-node {
-  color: #8cc84b;
-}
-.java {
-  background-color: #ff9800;
-}
-.fa-java {
-  color: #ff9800;
-}
-.python {
-  background-color: #3498db;
-}
-.fa-python {
-  color: #3498db;
 }
 .progress-bar,
 section > * {
@@ -822,8 +798,9 @@ section .container .content {
   .ball {
     width: 50px;
     height: 26px;
-    top: -33%;
-    right: -59%;
+    top: -56%;
+    right: -6%;
+    background-color: var(--primary-color);
     border-radius: 50px;
     position: relative;
     padding: 5px;
@@ -968,7 +945,7 @@ section .container .content {
 }
 @media (max-width: 480px) {
   .content h1,
-  h2 {
+  .content h2 {
     font-size: 1.8rem;
   }
   #contact p,
@@ -1011,9 +988,19 @@ section .container .content {
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
 
+  .ball {
+    background-color: var(--background-color);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
   body .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
-    background-color: var(--dark-mode-background, #000);
+    background-color: var(--dark-mode-background);
   }
 
   .mobile-nav.active {
@@ -1022,11 +1009,11 @@ section .container .content {
     z-index: 9999;
     overflow-y: auto;
   }
+
   body.blur-active .content {
     filter: blur(15px);
   }
 
-  /* Prevent scrolling when blur is active */
   body.blur-active {
     height: 100%;
     overflow: hidden;
@@ -1038,49 +1025,58 @@ section .container .content {
   }
 
   .container {
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 10px 0 15px;
   }
+
   section .container {
     margin-bottom: 50px;
   }
+
   .wrapper .icon {
     margin: 10px 0;
     color: var(--primary-color);
     transition: transform 0.3s;
   }
+
   .wrapper .icon:hover {
     transform: scale(1.2);
   }
+
   .mobile-nav a {
     font-size: 1rem;
   }
+
   .timeline-item {
     width: 100%;
     text-align: center;
     padding: 10px 20px;
   }
+
   .timeline-item::after {
     display: none;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
+
   .timeline::after {
     display: none;
     left: 50%;
   }
+
   .timeline-item.left,
   .timeline-item.right {
     left: 0;
     text-align: center;
     align-items: center;
   }
+
   .timeline-content {
     font-size: small;
     text-align: center;
     width: 100%;
   }
+
   .timeline-item.right::after {
     left: 160px;
   }
