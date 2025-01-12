@@ -182,11 +182,15 @@ nav ul li a:hover {
   height: 300px;
   border-radius: 50%;
 }
+
 .contact-form button:hover {
   background: #019f78;
 }
 .title {
   animation: 1s ease-in forwards fadeInUp;
+}
+#contact .title {
+  animation: 1s ease-in forwards fadeInRight;
 }
 .content,
 section .container .content {
@@ -216,6 +220,14 @@ section .container .content {
   object-fit: cover;
   animation: 1.5s forwards fadeInLeft;
 }
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: fadeInLeft 1.5s forwards, pulse 2s infinite 1.5s; /* Adding pulse animation after fadeInLeft completes */
+}
+
 .profile {
   overflow: hidden;
   box-shadow: 0 10px 20px #0000001a;
@@ -371,9 +383,9 @@ body.dark-mode .mobile-nav {
   color: var(--dark-mode-text);
   transition: background 0.5s, color 0.5s;
 }
-body.dark-mode #about h2 span,
+body.dark-mode #about,
 body.dark-mode #contact a,
-body.dark-mode #contact h2 span,
+body.dark-mode #contact,
 body.dark-mode #contact p,
 body.dark-mode a {
   color: var(--dark-mode-text);
@@ -771,6 +783,31 @@ section .container .content {
     transform: translateY(0);
   }
 }
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+}
 @media (max-width: 768px) {
   .checkbox-label .ball,
   .social-media {
@@ -957,13 +994,50 @@ section .container .content {
   .contact-detail.animated {
     margin-top: 25px;
   }
+
   .profile-img {
-    margin-top: 90px;
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    animation: 1s forwards fadeInUp;
+    animation: fadeInUp 1s forwards, pulse 2s infinite 1.5s;
+    position: relative;
+    z-index: 1; /* Ensure it's above the rotating circle */
+  }
+
+  @keyframes rotateClockwise {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
   }
   .content {
     animation: 1.5s forwards fadeInUp;
