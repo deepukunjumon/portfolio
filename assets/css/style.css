@@ -227,7 +227,8 @@ section .container .content {
   object-fit: cover;
 }
 nav {
-  position: absolute;
+  background-color: #000000;
+  position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
@@ -423,9 +424,19 @@ body.dark-mode .contact-form button:hover {
   padding: 10px 20px;
   border-radius: 5px;
 }
+.tabs button:hover {
+  border: none;
+  font-size: 1rem;
+  margin: 0 10px;
+  color: var(--primary-color);
+  transition: color 0.3s;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
 .tabs button.active {
-  background-color: #ececec;
-  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: 500;
 }
 .timeline {
   position: relative;
@@ -479,12 +490,12 @@ body.dark-mode .contact-form button:hover {
   left: -10px;
 }
 .timeline-content {
-  background: #fff;
+  background: inherit;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 4px 6px #0000001a;
+  box-shadow: 2px 2px 6px var(--primary-color);
   width: 350px;
-  text-align: center;
+  text-align: left;
 }
 .timeline-content h3 {
   color: var(--primary-color);
@@ -975,6 +986,9 @@ section .container .content {
   button {
     font-size: 0.9rem;
   }
+  .contact-detail.animated {
+    margin-top: 25px;
+  }
   .profile-img {
     margin-top: 90px;
     width: 200px;
@@ -1005,7 +1019,7 @@ section .container .content {
     filter: blur(15px);
   }
   .container {
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 15px;
   }
   section .container {
@@ -1055,11 +1069,13 @@ section .container .content {
     padding: 10px 20px;
   }
   .timeline-item::after {
+    display: none;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
   .timeline::after {
+    display: none;
     left: 50%;
   }
   .timeline-item.left,
@@ -1069,6 +1085,8 @@ section .container .content {
     align-items: center;
   }
   .timeline-content {
+    font-size: small;
+    text-align: center;
     width: 100%;
   }
   .timeline-item.right::after {
