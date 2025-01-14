@@ -40,10 +40,10 @@
         <!-- Mobile Navigation Section -->
         <div class="mobile-nav" id="mobileNav">
             <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
-            <li><a href="#about">About</a></li>
-            <li><a href="#qualifications">Qualifications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" onclick="toggleMenu(this)">About</a></li>
+            <li><a href="#qualifications" onclick="toggleMenu(this)">Qualifications</a></li>
+            <li><a href="#skills" onclick="toggleMenu(this)">Skills</a></li>
+            <li><a href="#contact" onclick="toggleMenu(this)">Contact</a></li>
             <label for="darkModeToggle" class="checkbox-label">
                 <i class="fa fa-moon"></i>
                 <i class="fa fa-sun"></i>
@@ -53,7 +53,7 @@
     </nav>
 
     <!-- Profile Section -->
-    <section id="profile" class="container">
+    <section id="profile" class="container profile-container">
         <div class="m-auto profile-img-container">
             <img class="profile-img" src="assets/img/pro-pic1.webp" alt="Profile Picture">
         </div>
@@ -102,12 +102,33 @@
 
     <!-- About Section -->
     <section id="about">
-        <div class="container about-container">
-            <div class="title">
-                <h2>About <span>Me</span></h2>
+        <div class="about-left">
+            <img src="assets/img/about-pic.webp" alt="About Me Image" />
+        </div>
+        <div class="about-right">
+            <p class="subtitle">My introduction</p>
+            <p class="description">
+                Web developer, with extensive knowledge and years of experience,
+                working in web technologies and UI/UX design, delivering quality work.
+            </p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>08+</h3>
+                    <p>Years experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20+</h3>
+                    <p>Completed projects</p>
+                </div>
+                <div class="stat-item">
+                    <h3>05+</h3>
+                    <p>Companies worked</p>
+                </div>
             </div>
+            <a href="#" class="hire-me-btn">Download CV</a>
         </div>
     </section>
+
 
     <!-- Qualifications Section -->
     <section id="qualifications">
