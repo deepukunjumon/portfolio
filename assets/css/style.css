@@ -45,7 +45,7 @@ section .container {
 }
 
 :root {
-  --primary-color: #0ed6b1;
+  --primary-color: #0fb99a;
   --primary-accent-color: #969696;
   --secondary-color: #252525;
   --background-color: #f7f7f7;
@@ -109,6 +109,10 @@ button.btn-submit:hover {
   background: #fff;
   color: var(--primary-color);
   border-color: var(--primary-color);
+}
+
+#profile {
+  margin-top: 150px;
 }
 
 .container {
@@ -257,6 +261,14 @@ nav ul li a:hover {
   width: 300px;
   height: 300px;
   border-radius: 50%;
+}
+
+.skills-left {
+  width: 50%;
+}
+
+.skills-img {
+  width: 70%;
 }
 
 .contact-form button:hover {
@@ -425,12 +437,14 @@ nav ul li a:hover:after {
   transition: color 0.3s;
 }
 
-.container {
-  position: relative;
+.timeline-item.left {
   z-index: 50;
-  margin-top: 230px;
-  margin-bottom: 150px;
-  transition: filter 0.3s ease-in-out;
+  animation: fadeInLeft 1.5s forwards;
+}
+
+.timeline-item.right {
+  z-index: 50;
+  animation: fadeInRight 1.5s forwards;
 }
 
 .contact-container,
@@ -725,9 +739,14 @@ section {
   color: #f39c12;
 }
 
-.progress-bar,
-section>* {
-  margin-bottom: 20px;
+.skills-container {
+  width: 90%;
+  margin-bottom: 0px;
+}
+
+.col-2 {
+  margin-top: -25px;
+  width: 70%;
 }
 
 section:last-child>* {
@@ -834,11 +853,6 @@ section .container .content {
   transform: translateX(0);
 }
 
-.skills-container {
-  width: 80% !important;
-  transition: 0.5s;
-}
-
 .row {
   width: 100%;
   display: flex;
@@ -846,7 +860,7 @@ section .container .content {
   margin-top: 70px;
 }
 
-.row .col1 .col2 {
+.row .skills-left .col2 {
   flex-basis: 46%;
 }
 
@@ -1122,11 +1136,11 @@ section .container .content {
     margin-bottom: 20px;
   }
 
-  .col-1 {
+  .skills-left {
     margin-top: -10px;
   }
 
-  .col-1,
+  .skills-left,
   .col-2 {
     width: 100%;
     margin-bottom: 75px;
@@ -1195,10 +1209,30 @@ section .container .content {
   }
 
   .container {
-    margin: 10px 0 15px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #profile {
+    margin-top: 100px;
+  }
+
+  .tabs .education-tab {
+    animation: fadeInLeft 1.5s forwards;
+  }
+
+  .tabs .work-tab {
+    animation: fadeInRight 1.5s forwards;
   }
 
   .profile-container {
+    margin-bottom: 40px;
     margin-top: 100px;
   }
 
@@ -1219,6 +1253,9 @@ section .container .content {
   }
 
   .profile-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -1432,8 +1469,20 @@ section .container .content {
   }
 
   section .container {
-    margin-top: 30px;
-    margin-bottom: 0px;
+    margin-top: 25px;
+  }
+
+  section {
+    padding: 2px;
+  }
+
+  .skills-left {
+    display: none;
+  }
+
+  .col-2 {
+    margin-top: -80px;
+    width: 90%;
   }
 
   .wrapper .icon {
@@ -1482,7 +1531,12 @@ section .container .content {
     width: 100%;
   }
 
-  .timeline-item.right::after {
-    left: 160px;
+  .timeline-item.left {
+    animation: fadeInLeft 1.5s forwards;
   }
+
+  .timeline-item.right {
+    animation: fadeInRight 1.5s forwards;
+  }
+
 }
