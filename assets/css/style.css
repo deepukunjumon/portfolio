@@ -1231,6 +1231,10 @@ section .container .content {
     animation: fadeInLeft 1.5s forwards;
   }
 
+  .skills-container {
+    margin-top: 50px;
+  }
+
   .tabs .work-tab {
     animation: fadeInRight 1.5s forwards;
   }
@@ -1484,8 +1488,12 @@ section .container .content {
     display: none;
   }
 
+  #skills {
+    margin-top: 60px;
+  }
+
   .col-2 {
-    margin-top: -80px;
+    margin-top: -125px;
     width: 90%;
   }
 
