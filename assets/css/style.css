@@ -745,7 +745,7 @@ section {
 }
 
 .col-2 {
-  margin-top: -25px;
+  margin-top: -85px;
   width: 70%;
 }
 
@@ -1091,6 +1091,10 @@ section .container .content {
     transform: translateX(24px);
     /* background: var(--background-color);
          */
+  }
+
+  #profile {
+    text-align: center;
   }
 
   .profile-img {
@@ -1539,4 +1543,16 @@ section .container .content {
     animation: fadeInRight 1.5s forwards;
   }
 
+  #contact {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .contact-detail {
+    text-align: center;
+  }
+
+  .contact-content {
+    margin-top: -50px;
+  }
 }
