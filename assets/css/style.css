@@ -1089,8 +1089,6 @@ section .container .content {
 
   body .checkbox:checked+.checkbox-label .ball {
     transform: translateX(24px);
-    /* background: var(--background-color);
-         */
   }
 
   #profile {
@@ -1159,6 +1157,16 @@ section .container .content {
     height: 4px;
   }
 
+  body {
+    display: ruby;
+  }
+
+  body.dark-mode .checkbox-label .ball {
+    transition: transform 0.3s linear, background 0.5s;
+    transform: translateX(25px);
+    background-color: var(--dark-mode-background);
+  }
+
   .progress-line {
     height: 6px;
   }
@@ -1212,16 +1220,6 @@ section .container .content {
     font-size: 1.8rem;
   }
 
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
 
   #profile {
     margin-top: 100px;
