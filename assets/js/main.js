@@ -114,3 +114,24 @@ document.querySelectorAll(".mobile-nav a").forEach((link) => {
     if (contentContainer) contentContainer.classList.remove("blur");
   });
 });
+
+// Toggle social media buttons (mobile view)
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+});
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll(".mobile-nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    const mobileNav = document.getElementById("mobileNav");
+    const contentContainer = document.getElementById("contentContainer");
+
+    if (mobileNav) mobileNav.classList.remove("active");
+    if (contentContainer) contentContainer.classList.remove("blur");
+  });
+});

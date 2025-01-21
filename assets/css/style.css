@@ -111,6 +111,96 @@ button.btn-submit:hover {
   border-color: var(--primary-color);
 }
 
+.menu-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+}
+
+.menu-toggle {
+  position: relative;
+  background: var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.menu {
+  position: absolute;
+  bottom: 70px;
+  right: -10px;
+  transform-origin: bottom center;
+  transform: scale(0);
+  /* Initially hidden */
+  background: var(--primary-color);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  /* Consistent width */
+  height: 300px;
+  /* Fixed height to prevent animation issues */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.menu.open {
+  right: -10px;
+  /* Ensure this matches the initial state */
+  width: 65px;
+  /* Consistent width */
+  transform: scale(1);
+  /* Expand smoothly */
+  opacity: 1;
+  /* Avoid changing the height dynamically */
+}
+
+.menu-item {
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.menu-item .fab {
+  font-size: 1.6rem;
+}
+
+.menu-item:hover {
+  transform: scale(1.2);
+  color: #ffe0e6;
+}
+
+svg {
+  fill: white;
+}
+
+/* Blur effect for background when menu is open */
+.menu-open .content {
+  filter: blur(5px);
+}
+
 #profile {
   margin-top: 150px;
 }
@@ -238,6 +328,7 @@ nav ul li a:hover {
 
 .contact-form input,
 .contact-form textarea {
+  background: inherit;
   width: 100%;
   padding: 10px 15px;
   border: 2px solid var(--primary-color);
@@ -516,7 +607,7 @@ body.dark-mode a {
 
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
-  background: var(--dark-mode-background);
+  background: inherit;
   color: var(--dark-mode-text);
   border: 1px solid var(--dark-mode-text);
 }
@@ -1010,11 +1101,23 @@ section .container .content {
   }
 }
 
-@media (min-width: 1201px) {}
+@media (min-width: 1201px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
-@media (min-width: 1025px) and (max-width: 1200px) {}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
-@media (min-width: 769px) and (max-width: 1024px) {}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
 @media (min-width: 481px) and (max-width: 768px) {
 
@@ -1258,6 +1361,10 @@ section .container .content {
     margin-top: 50px;
   }
 
+  .menu-toggle {
+    display: flex;
+  }
+
   .profile-img {
     display: block;
     margin-left: auto;
@@ -1389,7 +1496,7 @@ section .container .content {
 
   body.dark-mode .contact-form input,
   body.dark-mode .contact-form textarea {
-    background: var(--dark-mode-background);
+    background: inherit;
     color: var(--dark-mode-text);
     border: 1px solid var(--dark-mode-text);
   }
