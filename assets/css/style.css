@@ -119,6 +119,7 @@ button.btn-submit:hover {
 }
 
 .menu-toggle {
+  right: -5px;
   position: relative;
   background: var(--primary-color);
   border-radius: 50%;
@@ -146,7 +147,6 @@ button.btn-submit:hover {
   right: -10px;
   transform-origin: bottom center;
   transform: scale(0);
-  /* Initially hidden */
   background: var(--primary-color);
   border-radius: 50px;
   display: flex;
@@ -154,9 +154,8 @@ button.btn-submit:hover {
   justify-content: center;
   align-items: center;
   width: 65px;
-  /* Consistent width */
-  height: 300px;
-  /* Fixed height to prevent animation issues */
+  height: max-content;
+  padding: 10px;
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -165,13 +164,9 @@ button.btn-submit:hover {
 
 .menu.open {
   right: -10px;
-  /* Ensure this matches the initial state */
   width: 65px;
-  /* Consistent width */
   transform: scale(1);
-  /* Expand smoothly */
   opacity: 1;
-  /* Avoid changing the height dynamically */
 }
 
 .menu-item {
@@ -192,7 +187,8 @@ button.btn-submit:hover {
   color: #ffe0e6;
 }
 
-svg {
+.menu-toggle svg {
+  height: 2rem;
   fill: white;
 }
 
