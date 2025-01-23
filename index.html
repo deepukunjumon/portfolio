@@ -32,7 +32,8 @@
             <li><a href="#qualifications">Qualifications</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
-            <input type="checkbox" id="darkModeToggle" class="checkbox" onchange="toggleDarkMode()">
+            <input type="checkbox" id="darkModeToggle" class="checkbox" style="display: none;"
+                onchange="toggleDarkMode()">
             <label for="darkModeToggle" class="checkbox-label">
                 <i class="fa fa-moon"></i>
                 <i class="fa fa-sun"></i>
@@ -137,59 +138,83 @@
         </div>
     </section>
 
-    <!-- Qualifications Section -->
-    <section id="qualifications">
+    <section id="qualifications" class="container qualification-container">
         <div class="container qualification-container">
             <div class="title">
                 <h2>My <span>Qualifications</span></h2>
             </div>
 
             <div class="tabs">
-                <button id="education-tab" class="education-tab active"
-                    onclick="showTab('education')">Education</button>
-                <button id="work-tab" class="work-tab" onclick="showTab('work')">Work</button>
+                <button class="tab-button active" data-target="education">Education</button>
+                <button class="tab-button" data-target="work">Experience</button>
             </div>
+        </div>
 
-            <div id="education" class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Master of Computer Applications (MCA)</h3>
-                        <p>Kerala Technological University (KTU)</p>
-                        <p class="year">2021 - 2023</p>
+        <!-- Content Containers -->
+        <div id="education" class="tab-content active">
+            <ul class="timeline">
+                <!-- Education Item 1 -->
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="hexa"></span>
+                            <span class="flag">Master of Computer Applications</span>
+                            <span class="time-wrapper"><span class="time">2021-2023</span></span>
+                        </div>
+                        <div class="desc">Kerala Technological University (KTU)<br>CGPA: 7.81</div>
                     </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Bachelor of Computer Applications</h3>
-                        <p>Mahatma Gandhi University</p>
-                        <p class="year">2017 - 2020</p>
+                </li>
+                <!-- Education Item 2 -->
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="hexa"></span>
+                            <span class="flag">Bachelor of Computer Applications</span>
+                            <span class="time-wrapper"><span class="time">2017-2020</span></span>
+                        </div>
+                        <div class="desc">Mahatma Gandhi University (MGU)<br>CCPA: 5.73</div>
                     </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Higher Secondary Education</h3>
-                        <p>Kerala State Board</p>
-                        <p class="year">2015 - 2017</p>
+                </li>
+                <!-- Education Item 3 -->
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="hexa"></span>
+                            <span class="flag">Higher Secondary Education</span>
+                            <span class="time-wrapper"><span class="time">2015-2017</span></span>
+                        </div>
+                        <div class="desc">Kerala State Board<br>Percentage : 72</div>
                     </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>High School Education</h3>
-                        <p>Central Board of Secondary Education</p>
-                        <p class="year">2015</p>
+                </li>
+                <!-- Education Item 4 -->
+                <li>
+                    <div class="direction-l">
+                        <div class="flag-wrapper">
+                            <span class="hexa"></span>
+                            <span class="flag">High School Education</span>
+                            <span class="time-wrapper"><span class="time">2015</span></span>
+                        </div>
+                        <div class="desc">Central Board of Secondary Education<br>Score : 9.2</div>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
+        </div>
 
-            <div id="work" class="timeline hidden">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>PHP Developer</h3>
-                        <p>Acumen Capital Market India Ltd.</p>
-                        <p class="year">Nov 2023 - Present</p>
+        <div id="work" class="tab-content">
+            <ul class="timeline">
+                <!-- Experience Item 1 -->
+                <li>
+                    <div class="direction-r">
+                        <div class="flag-wrapper">
+                            <span class="hexa"></span>
+                            <span class="flag">PHP Developer</span>
+                            <span class="time-wrapper"><span class="time">Nov 2023-Present</span></span>
+                        </div>
+                        <div class="desc">Acumen Capital Market India Ltd.<br></div>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
+        </div>
     </section>
 
     <!-- Skills Section -->
