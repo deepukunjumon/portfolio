@@ -16,24 +16,24 @@ function toggleMenu(element) {
   }
 }
 
-function showTab(tab) {
-  const educationTab = document.getElementById("education");
-  const workTab = document.getElementById("work");
-  const educationButton = document.getElementById("education-tab");
-  const workButton = document.getElementById("work-tab");
 
-  if (tab === "education") {
-    educationTab.classList.remove("hidden");
-    workTab.classList.add("hidden");
-    educationButton.classList.add("active");
-    workButton.classList.remove("active");
-  } else {
-    workTab.classList.remove("hidden");
-    educationTab.classList.add("hidden");
-    workButton.classList.add("active");
-    educationButton.classList.remove("active");
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab-button");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Remove active class from all tabs and content
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((content) => content.classList.remove("active"));
+
+      // Add active class to the clicked tab and its content
+      tab.classList.add("active");
+      const target = document.getElementById(tab.getAttribute("data-target"));
+      target.classList.add("active");
+    });
+  });
+});
 
 // Function to handle form submission
 function handleFormSubmit(form) {
