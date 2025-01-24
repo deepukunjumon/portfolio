@@ -308,7 +308,6 @@ button.btn-submit:hover {
 .flag {
   position: relative;
   display: inline;
-  /* background: var(--background-color); */
   font-weight: 600;
   font-size: 1.1rem;
   z-index: 15;
@@ -350,7 +349,6 @@ button.btn-submit:hover {
   margin: 4px 0 0 0;
   z-index: 14;
   line-height: 1em;
-  vertical-align: middle;
   color: #fff;
 }
 
@@ -1442,12 +1440,6 @@ section .container .content {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-
-  .checkbox-label .ball,
-  .social-media {
-    /* background-color: var(--background-color);
-         */
-  }
 
   .contact-subtitle,
   .title-desc,
